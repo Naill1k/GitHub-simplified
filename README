@@ -1,0 +1,18 @@
+FEATURES
+Les fichiers objects.ml, logs.ml, commands.ml et ogit.ml sont complétés.
+
+Le fichier ogit est la forme compilée de ogit.ml et permet d'utiliser le programme dans le terminal.
+
+Better Hash et Git Merge II ne sont pas implémentés.
+
+
+TESTS
+Les hashs des objects repertoires versionnés ne correspondent pas toujours à ceux des test car leur contenu n'est pas écrit dans le même ordre (commande Sys.readdir).
+
+Dans les tests de logs.ml, les deux heads apparaissent différents mais la liste est juste inversée.
+
+
+KNOWN ISSUES
+Dans le cas d'un merge avec conflit, la liste des fichiers "..cl" et "..cr" s'affiche avant le début du message d'erreur alors que la commande est appelée après.
+
+Log Graph n'affiche pas tous les traits si il y a trop de merge imbriqués.
